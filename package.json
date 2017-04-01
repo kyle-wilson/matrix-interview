@@ -1,0 +1,32 @@
+{
+  "name": "matrix-interview",
+  "version": "1.0.0",
+  "description": "Matrix multiplication JS interview implementation",
+  "main": "build/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel --presets es2015 src -d build",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyle-wilson/matrix-interview.git"
+  },
+  "keywords": [
+    "matrix",
+    "multiplication",
+    "interview",
+    "view",
+    "js"
+  ],
+  "author": "kyle-wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyle-wilson/matrix-interview/issues"
+  },
+  "homepage": "https://github.com/kyle-wilson/matrix-interview#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0"
+  }
+}
