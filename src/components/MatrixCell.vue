@@ -8,6 +8,8 @@
 </template>
 
 <script>
+	import bus from '../bus.js';
+
 	export default {
 		name: 'matrix-cell',
 
@@ -35,7 +37,7 @@
 			updateValue: function(event) {
 				var newValue = parseInt(event.target.value, 10) || 0;
 				// Emit the event on the bus.
-				//bus.$emit('cellUpdate', this.row, this.col, newValue);
+				bus.$emit('cellUpdate', this.row, this.col, newValue);
 			},
 
 			// Used to clean the value
@@ -47,7 +49,7 @@
 		updated () {
 			console.log('child updated');
 		}
-	}
+	};
 </script>
 
 <style>

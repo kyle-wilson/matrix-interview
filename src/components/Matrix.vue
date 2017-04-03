@@ -11,6 +11,7 @@
 <script>
 	import Vue from 'vue';
 	import MatrixRow from './MatrixRow.vue';
+	import bus from '../bus.js';
 
 	export default {
 		name: 'matrix',
@@ -33,7 +34,7 @@
 
 		mounted () {
 			// Add handler to bus events so we receive matrix-cell update events.
-			/*bus.$on('cellUpdate', function(row, col, value) {
+			bus.$on('cellUpdate', function(row, col, value) {
 				// Validate.
 				if (row < 0 || row >= this.values.length) {
 					console.error('Invalid row number provided to updateCellValue: ' + row);
@@ -46,7 +47,7 @@
 
 				// Update data. Use set because Vue can't detect bracket syntax.
 				Vue.set(this.values[row], col, value);
-			}.bind(this));*/
+			}.bind(this));
 		},
 
 		updated () {
